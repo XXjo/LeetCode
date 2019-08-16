@@ -1,12 +1,16 @@
+"""
+       时间复杂度变成O(n)
+思路： 一遍循环遍历，将数保存在字典中，然后利用差查找。字典查找的时间复杂度是O(1)
+"""
+
+
 def twoSum(nums, target):
-    res = []
-    for i in range(0, len(nums) - 1):
-        for j in range(i + 1, len(nums)):
-            if nums[i] + nums[j] == target:
-                res.append(i)
-                res.append(j)
-                break
-    return res
+    hashmap = {}
+    for index, num in enumerate(nums):
+        another = target - num
+        if another in hashmap:
+            return [index, hashmap[another]]
+        hashmap[num] = index
 
 
 if __name__ == '__main__':
