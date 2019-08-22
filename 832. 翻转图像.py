@@ -1,3 +1,5 @@
+#用insert方法，在0的位置插入
+
 def flipAndInvertImage(A):
     res = []
     for l in A:

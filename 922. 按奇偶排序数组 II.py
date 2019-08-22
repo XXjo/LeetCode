@@ -1,3 +1,4 @@
+#按值的奇偶性分别存到两个数组，然后利用索引奇偶性pop赋值
 def sortArrayByParityII(A):
     odd = []
     even = []

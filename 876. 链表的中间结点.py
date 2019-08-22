@@ -1,3 +1,5 @@
+#快慢指针
+
 class LinkNode:
     def __init__(self, x):
         self.val = x

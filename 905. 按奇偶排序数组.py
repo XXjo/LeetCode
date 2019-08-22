@@ -1,3 +1,4 @@
+#分治
 def sortArrayByParity(A):
     low = 0
     high = len(A) - 1
