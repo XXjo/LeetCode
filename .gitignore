@@ -1,1 +1,4 @@
-.idea
+python/.idea
+java/.idea
+java/out
+java/*.iml
