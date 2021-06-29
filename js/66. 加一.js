@@ -4,10 +4,10 @@
  * @Autor: XuXiaoling
  * @Date: 2021-05-21 14:36:42
  * @LastEditors: XuXiaoling
- * @LastEditTime: 2021-05-21 16:29:12
+ * @LastEditTime: 2021-06-04 15:51:15
  */
 /**
- * @description: 
+ * @description: 利用余数判断当前位是否加一，时间复杂度O(n), 空间复杂度O(1)
  * @param {*} digits
  * @return {*}
  * @author: XuXiaoling
