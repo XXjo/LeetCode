@@ -4,12 +4,40 @@
  * @Autor: XuXiaoling
  * @Date: 2021-08-03 00:00:33
  * @LastEditors: XuXiaoling
- * @LastEditTime: 2021-08-08 16:53:45
+ * @LastEditTime: 2021-08-15 18:39:43
  */
 function TreeNode(val, left, right) {
     this.val = (val===undefined ? 0 : val)
     this.left = (left===undefined ? null : left)
     this.right = (right===undefined ? null : right)
+}
+
+
+
+
+/**
+ * @description:    迭代，官方题解。节点有左节点就入栈，一直找到最左侧的叶子节点。然后出栈，
+ *                  判断是否其是否有右孩子，若有右孩子就加入栈，然后重复上述操作
+ *                  时间复杂度O(n),因为只将树的节点遍历一次
+ *                  空间复杂度O(n)
+ * @param {TreeNode} root
+ * @return {number[]}
+ * @author: XuXiaoling
+ */
+var preorderTraversal = function(root) {
+    let stack = [];
+    let res = [];
+    let cur = root;
+    while(cur !== null || stack.length > 0) {
+        while(cur !== null) {
+            res.push(cur.val);
+            stack.push(cur);
+            cur = cur.left;
+        }
+        cur = stack.pop();
+        cur = cur.right;
+    }
+    return res;
 }
 
 
@@ -21,7 +49,7 @@ function TreeNode(val, left, right) {
  * @return {number[]}
  * @author: XuXiaoling
  */
-var preorderTraversal = function(root) {
+var preorderTraversal2 = function(root) {
     let res = [];
     let stack = [];
     let cur = null;
@@ -54,7 +82,7 @@ var recursion = function(root, res) {
     }
 }
 
-var preorderTraversal2 = function(root) {
+var preorderTraversal3 = function(root) {
     let res = [];
     res = recursion(root, res);
     return res;
