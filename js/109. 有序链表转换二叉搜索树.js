@@ -1,10 +1,12 @@
 /*
- * @Description: 
+ * @Description:    二叉搜索树：若它的左子树不为空，左子树上所有节点的值都小于它的根节点。
+                    若它的右子树不为空，右子树上所有的节点的值都大于它的根节点。
+                    主要思想就是二分查找  
  * @Version: 1.0
  * @Autor: XuXiaoling
  * @Date: 2021-07-22 17:24:27
  * @LastEditors: XuXiaoling
- * @LastEditTime: 2021-07-22 17:56:16
+ * @LastEditTime: 2021-08-29 12:58:26
  */
 function ListNode(val, next) {
     this.val = (val===undefined ? 0 : val)
